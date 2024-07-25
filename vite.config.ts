@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     outDir: "./dist",
+    emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, "./src/index.ts"),
       name: "sample-vue-ui-components",
