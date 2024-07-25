@@ -3,6 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sample-vue-ui-components.umd.cjs",
+  "module": "./dist/sample-vue-ui-components.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sample-vue-ui-components.js",
+      "export": "./dist/sample-vue-ui-components.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
