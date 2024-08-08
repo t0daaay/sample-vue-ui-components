@@ -11,7 +11,8 @@
   "exports": {
     ".": {
       "import": "./dist/sample-vue-ui-components.js",
-      "export": "./dist/sample-vue-ui-components.umd.cjs"
+      "export": "./dist/sample-vue-ui-components.umd.cjs",
+      "types": "./dist/types/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
   },
