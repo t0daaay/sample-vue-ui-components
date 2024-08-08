@@ -1,7 +1,6 @@
 {
   "name": "sample-vue-ui-components",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.6",
   "type": "module",
   "files": [
     "/dist"
@@ -10,9 +9,9 @@
   "module": "./dist/sample-vue-ui-components.js",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/sample-vue-ui-components.js",
-      "export": "./dist/sample-vue-ui-components.umd.cjs",
-      "types": "./dist/types/index.d.ts"
+      "require": "./dist/sample-vue-ui-components.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
