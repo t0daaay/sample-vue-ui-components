@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "jsx": "preserve",
-    "rootDir": "src",
+    "rootDir": "./src",
     "emitDeclarationOnly": true,
     "declaration": true,
     "declarationMap": true,
