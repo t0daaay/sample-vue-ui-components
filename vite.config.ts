@@ -9,7 +9,6 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "./src/index.ts"),
       name: "sample-vue-ui-components",
-      formats: ["es", "umd"],
     },
     rollupOptions: {
       external: ["vue"],
