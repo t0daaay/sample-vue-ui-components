@@ -5,13 +5,10 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [vue()],
   build: {
-    outDir: "./dist",
     emptyOutDir: false,
-    sourcemap: true,
     lib: {
       entry: resolve(__dirname, "./src/index.ts"),
       name: "sample-vue-ui-components",
-      fileName: "sample-vue-ui-components",
       formats: ["es", "umd"],
     },
     rollupOptions: {
