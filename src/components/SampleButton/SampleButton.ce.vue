@@ -12,6 +12,7 @@ const handleClick = (event: MouseEvent) => {
 
 <template>
   <button @click="handleClick" class="button">
+    反映確認
     <slot></slot>
   </button>
 </template>
