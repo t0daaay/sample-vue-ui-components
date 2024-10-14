@@ -1,26 +1,25 @@
-<template>
-  <button @click="handleClick">{{ label }}</button>
-</template>
-
-<script setup>
+<script lang="ts" setup>
 import { defineProps, defineEmits } from "vue";
 
 // props の定義
-const props = defineProps({
-  label: {
-    type: String,
-    required: true,
-  },
-});
+const props = defineProps<{
+  label: string;
+}>();
 
 // emit の定義
-const emit = defineEmits(["click"]);
+const emit = defineEmits<{
+  (e: "click"): void;
+}>();
 
 // メソッド
 const handleClick = () => {
   emit("click");
 };
 </script>
+
+<template>
+  <button @click="handleClick">{{ props.label }}</button>
+</template>
 
 <style scoped>
 button {

@@ -1,7 +1,7 @@
 import { defineCustomElement } from "vue";
-import SampleButtonCE from "./components/SampleButton/SampleButton.ce.vue";
+import VueSampleButton from "./components/SampleButton/SampleButton.ce.vue";
 
-const SampleButton = defineCustomElement(SampleButtonCE);
+const SampleButton = defineCustomElement(VueSampleButton);
 
 export { SampleButton };
 
