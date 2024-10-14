@@ -8,12 +8,12 @@ const props = defineProps<{
 
 // emit の定義
 const emit = defineEmits<{
-  (e: "click"): void;
+  (e: "buttonClick"): void;
 }>();
 
 // メソッド
 const handleClick = () => {
-  emit("click");
+  emit("buttonClick");
 };
 </script>
 
