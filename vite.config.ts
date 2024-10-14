@@ -3,16 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          // ダッシュを含むすべてのタグをカスタム要素として扱う
-          isCustomElement: (tag) => tag.includes("-"),
-        },
-      },
-    }),
-  ],
+  plugins: [vue()],
   // ビルドプロセスに関する設定を定義
   build: {
     // types ディレクトリが削除されないように false に設定している

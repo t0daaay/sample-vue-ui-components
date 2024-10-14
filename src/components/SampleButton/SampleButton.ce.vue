@@ -1,34 +1,37 @@
-<script lang="ts" setup>
-import { defineEmits } from "vue";
+<template>
+  <button @click="handleClick">{{ label }}</button>
+</template>
 
-const emit = defineEmits<{
-  (e: "click", event: MouseEvent): void;
-}>();
+<script setup>
+import { defineProps, defineEmits } from "vue";
 
-const handleClick = (event: MouseEvent) => {
-  emit("click", event);
+// props の定義
+const props = defineProps({
+  label: {
+    type: String,
+    required: true,
+  },
+});
+
+// emit の定義
+const emit = defineEmits(["click"]);
+
+// メソッド
+const handleClick = () => {
+  emit("click");
 };
 </script>
 
-<template>
-  <button @click="handleClick" class="button">
-    反映確認
-    <slot></slot>
-  </button>
-</template>
-
 <style scoped>
-.button {
+button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #42b983;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
-
-.button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #2a9d8f;
 }
 </style>
